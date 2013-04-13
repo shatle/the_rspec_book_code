@@ -9,7 +9,7 @@ Feature: code-breaker submits guess
     When I guess "<guess>"
     Then the mark should be "<mark>"
 
-  Scenario: 0 matches
+  Scenarios: 0 matches
     | code | guess | mark |
     | 1234 | 5555  |      |
 
