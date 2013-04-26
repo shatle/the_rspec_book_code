@@ -1,0 +1,11 @@
+#!/usr/bin/ruby 
+# coding: utf-8
+
+last_name=`ls -l | awk '{print $9}' | grep [0-9] | tail -1`
+if ARGV.length == 0
+	next_name = last_name.to_i + 1
+else 
+	next_name = last_name.to_i + ARGV[0].to_i
+end 
+`cp -rf #{last_name} #{next_name}`
+p "copy folder: #{last_name} to #{next_name}"
