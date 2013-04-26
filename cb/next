@@ -2,6 +2,7 @@
 # coding: utf-8
 
 last_name=`ls -l | awk '{print $9}' | grep [0-9] | tail -1`
+last_name.chop!
 if ARGV.length == 0
 	next_name = last_name.to_i + 1
 else 
