@@ -1,0 +1,7 @@
+#!/bin/bash 
+
+find . -iname *~ | while read f
+do 
+	rm $f
+	echo "remove file: $f"
+done
